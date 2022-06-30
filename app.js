@@ -163,17 +163,17 @@ app.get('/vehicles/:id', (req, res) => {
     });;
 });
 
-// app.get('/starships', (req, res) => {
-//     axios({
-//         method: "GET",
-//         url: "https://swapi.dev/api/starships/"
-//     }).then((response) => {
-//         let data = response.data;
-//         res.send(data);
-//     }).catch((error) => {
-//         res.send(error)
-//     });
-// });
+app.get('/starships', (req, res) => {
+    axios({
+        method: "GET",
+        url: "https://swapi.dev/api/starships/"
+    }).then((response) => {
+        let data = response.data;
+        res.send(data);
+    }).catch((error) => {
+        res.send(error)
+    });
+});
 
 // app.get('/starships/:id', (req, res) => {
 //     let id = req.params.id;
