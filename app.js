@@ -175,20 +175,20 @@ app.get('/starships', (req, res) => {
     });
 });
 
-// app.get('/starships/:id', (req, res) => {
-//     let id = req.params.id;
+app.get('/starships/:id', (req, res) => {
+    let id = req.params.id;
 
-//     axios({
-//         method: "GET",
-//         url: "https://swapi.dev/api/starships/" + parseInt(id),
-//     }).then((response) => {
-//         let data = response.data;
-//         console.log(data)
-//         res.send(data);
-//     }).catch((error) => {
-//         res.send(error)
-//     });;
-// });
+    axios({
+        method: "GET",
+        url: "https://swapi.dev/api/starships/" + parseInt(id),
+    }).then((response) => {
+        let data = response.data;
+        console.log(data)
+        res.send(data);
+    }).catch((error) => {
+        res.send(error)
+    });;
+});
 
 
 app.listen(PORT, () => {
